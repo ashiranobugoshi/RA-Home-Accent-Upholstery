@@ -1,0 +1,145 @@
+.portfolio-card {
+  width: 382px;
+  height: 685px;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Before Click State - Dark Navy Background */
+.portfolio-card__before {
+  width: 100%;
+  height: 100%;
+  background-color: #0e243f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.portfolio-card__text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* After Click State - Image Container */
+.portfolio-card__after {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.portfolio-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Client Logo - Top Left */
+.portfolio-card__logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.portfolio-card__logo img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+/* Bottom Overlay with Gradient */
+.portfolio-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  z-index: 5;
+}
+
+.portfolio-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portfolio-card__detail-item {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.portfolio-card__label {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #c8a439;
+  white-space: nowrap;
+}
+
+.portfolio-card__text-white {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: white;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-card {
+    width: 100%;
+    max-width: 382px;
+    height: auto;
+    aspect-ratio: 382 / 685;
+  }
+
+  .portfolio-card__text {
+    font-size: 18px;
+  }
+
+  .portfolio-card__logo {
+    width: 60px;
+    height: 60px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .portfolio-card__overlay {
+    height: 120px;
+    padding: 16px;
+  }
+
+  .portfolio-card__label,
+  .portfolio-card__text-white {
+    font-size: 12px;
+  }
+}
