@@ -1,22 +1,63 @@
 footer {
-  background-color: #2c3e50;
+  background-color: #0E243F;
   color: white;
-  padding: 50px 20px;
-  margin-top: 60px;
+  padding: -10px 30px;  /* First value = top/bottom padding, Second = left/right padding */
+  margin-top: 0px;      /* Space above entire footer */
+}
+
+/* LOGO CONTAINER - Adjust position, alignment, and size here */
+.footer-logo-container {
+  max-width: 1200px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  left: 70px;           /* Move LEFT/RIGHT: increase = move right, decrease (or negative) = move left */
+  top: 70px;           /* Move UP/DOWN: increase = move down, decrease (or negative) = move up */
 }
 
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px;     /* Max width of sections area */
+  margin: 0 auto;        /* Center content horizontally */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  gap: 40px;             /* Space between columns (increase = more space between sections) */
 }
 
 .footer-section h3 {
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 20px;  /* Space below heading (increase = more gap to content) */
   font-weight: bold;
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* Change to 'center' or 'flex-end' to adjust horizontal alignment */
+  gap: 15px;                /* Space between logo, title, and description (increase = more vertical gap) */
+}
+
+.footer-logo-section p {
+  margin-top: -15px;  /* Move UP/DOWN: use negative value to move up, positive to move down */
+}
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 5px;
 }
 
 .footer-section ul {
@@ -24,13 +65,13 @@ footer {
 }
 
 .footer-section ul li {
-  margin-bottom: 10px;
+  margin-bottom: 1px;  /* Space between list items (increase = more vertical gap) */
 }
 
 .footer-section a {
   color: #d4a574;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   transition: color 0.3s;
 }
 
@@ -47,17 +88,18 @@ footer {
 .contact-info {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 10px;           /* Space between icon and text (increase = more gap) */
+  margin-bottom: 1px; /* Space below each contact item */
   font-size: 14px;
 }
 
 .footer-bottom {
   max-width: 1200px;
-  margin: 40px auto 0;
-  padding-top: 30px;
+  margin: 40px auto 0;  /* First = top space, Second = left/right (auto = centered), Third = bottom */
+  padding-top: 20px;   /* Space above copyright text */
+  padding-bottom: 30px; /* Space below copyright text (increase = more gap below) */
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
+  text-align: center;   /* Center the copyright text */
   font-size: 14px;
   opacity: 0.8;
 }

@@ -23,36 +23,29 @@ function AboutPage() {
           <div className="founder-section">
             <h2>Founder: Aileen Malenab</h2>
             <p>
-              <strong>Vision & Mission:</strong> With a commitment to integrity, excellence, 
-              and a genuine heart for service, Aileen established this company to create 
-              high-quality upholstery solutions that transform spaces and bring joy to her clients.
+              “Integrity, excellence, and a heart for service.” Aileen leads with vision — ensuring quality craftsmanship and honest stewardship, honoring God through reliable work.
             </p>
           </div>
         </div>
 
         <div className="vision-mission-section">
-          <div className="vision">
-            <h3>Vision</h3>
-            <p>
-              To become a trusted leader in premium upholstery and furniture restoration 
-              services in the Philippines.
-            </p>
-          </div>
-
-          <div className="mission">
-            <h3>Mission</h3>
-            <p>
-              Skilled craftsmanship + honest workmanship + dependable service
-            </p>
-          </div>
+          <h2>Vision & Mission</h2>
+          <p>
+            <strong>Vision:</strong> To become a trusted leader in premium upholstery 
+            and furniture restoration services in the Philippines.
+          </p>
+          <p>
+            <strong>Mission:</strong> Skilled craftsmanship + honest workmanship + dependable service
+          </p>
         </div>
 
         <div className="values-section">
           <h2>Core Values</h2>
-          <p className="values-list">
+          <p>
             {companyInfo.values}
-          </p>
-          <p className="values-description">
+            <br /><br />
+            Integrity • Craftsmanship-led • Quality-focused • Home-inspired • Style-conscious
+            <br />
             We support Filipino craftsmen and pride ourselves on delivering excellence 
             in every project, from single furniture pieces to large-scale commercial installations.
           </p>

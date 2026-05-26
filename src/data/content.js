@@ -201,7 +201,6 @@ export const companyInfo = {
   serviceAreas: "Metro Manila, Rizal, nearby Luzon, Nationwide for large projects",
   vision: "To become a trusted leader in premium upholstery and furniture restoration services in the Philippines.",
   mission: "Skilled craftsmanship + honest workmanship + dependable service",
-  values: "Integrity • Craftsmanship-led • Quality-focused • Home-inspired • Style-conscious",
   history: "Established in 2016, RA Home Accent & Upholstery started as Aileen's Dry Goods and was officially incorporated in 2022. We are dedicated to supporting Filipino craftsmen while delivering world-class upholstery services.",
   whyChooseUs: [
     "15+ years master upholsterer expertise",

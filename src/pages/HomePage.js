@@ -35,12 +35,12 @@ const industriesServeItems = [
 ];
 
 const serviceCards = [
-  { title: "Upholstery Services", description: "sofa, chair, headboard, foam replacement & frame repair" },
-  { title: "Furniture Restoration", description: "revive worn furniture — sofas, office and hotel chairs" },
-  { title: "Custom Restoration", description: "custom sofa, headboards, bed frames & decorative pieces" },
-  { title: "Commercial Projects", description: "hotels, restaurants, offices, clinics — bulk upholstery" },
-  { title: "Home Textiles", description: "Curtains, cushion covers, table runners, sofa covers." },
-  { title: "Commercial Supply", description: "Doormats, textile supplies for hotels, corporate bulk orders." },
+  { icon: "💼", title: "Upholstery Services", description: "sofa, chair, headboard, foam replacement & frame repair" },
+  { icon: "🔧", title: "Furniture Restoration", description: "revive worn furniture — sofas, office and hotel chairs" },
+  { icon: "✂️", title: "Custom Restoration", description: "custom sofa, headboards, bed frames & decorative pieces" },
+  { icon: "🏢", title: "Commercial Projects", description: "hotels, restaurants, offices, clinics — bulk upholstery" },
+  { icon: "🏠", title: "Home Textiles", description: "Curtains, cushion covers, table runners, sofa covers." },
+  { icon: "📦", title: "Commercial Supply", description: "Doormats, textile supplies for hotels, corporate bulk orders." },
 ];
 
 const quickLinks = ["HOME", "ABOUT", "PORTFOLIO", "CONTACT"];
@@ -70,6 +70,7 @@ const ServiceHighlightsSection = () => (
       <div className="services-grid">
         {serviceCards.map((card) => (
           <article key={card.title} className="service-card">
+            <div className="service-icon">{card.icon}</div>
             <h3>{card.title}</h3>
             <p>{card.description}</p>
           </article>

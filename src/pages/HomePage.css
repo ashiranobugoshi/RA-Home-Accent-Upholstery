@@ -1,4 +1,6 @@
 /* Home Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;700&display=swap');
+
 .home-page {
   width: 100%;
   background-color: white;
@@ -6,7 +8,7 @@
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);
+  background: url('../images/blue.png') center/cover no-repeat;
   color: white;
   padding: 100px 40px;
   text-align: center;
@@ -14,18 +16,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);  /* Overlay for better text contrast */
 }
 
 .hero-content {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 30px;
-  font-family: 'Inria Serif', serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   line-height: 1.3;
 }
 
@@ -83,11 +98,20 @@
 }
 
 .service-card {
-  background: white;
+  background: url('../images/what we do.png') center/cover;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
 .service-card:hover {
@@ -99,13 +123,13 @@
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #1a1a1a;
+  color: white;
   font-family: 'Inria Serif', serif;
 }
 
 .service-card p {
   font-size: 16px;
-  color: #666;
+  color: white;
   font-family: 'Playfair Display', Georgia, serif;
   line-height: 1.6;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap');
+
 .page-header {
   background-color: #e8dcc8;
   padding: 60px 20px;
@@ -11,6 +13,7 @@
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 20px;
+  font-family: 'Inria Serif', serif;
 }
 
 .page-header h1:after {

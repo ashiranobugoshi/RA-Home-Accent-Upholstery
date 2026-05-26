@@ -6,8 +6,15 @@ import './Footer.css';
 function Footer() {
   return (
     <footer>
+      {/* LOGO SECTION - You can move this block anywhere in the footer */}
+      <div className="footer-logo-container">
+        <div className="footer-logo">
+          <img src={require('../images/logo.png')} alt="RA Home Accent & Upholstery Logo" />
+        </div>
+      </div>
+
       <div className="footer-content">
-        <div className="footer-section">
+        <div className="footer-section footer-logo-section">
           <h3>RA Home Accent & Upholstery</h3>
           <p>Premium upholstery & furniture restoration since 2006.</p>
         </div>

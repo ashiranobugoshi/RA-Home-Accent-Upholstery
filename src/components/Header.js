@@ -8,7 +8,9 @@ function Header() {
     <header>
       <div className="navbar">
         <div className="logo">
-          <div className="logo-circle">RA</div>
+          <div className="logo-circle">
+            <img src={require('../images/logo.png')} alt="RA Home Accent & Upholstery Logo" />
+          </div>
           <div className="logo-text">
             RA Home Accent <span className="ampersand">&</span> Upholstery
           </div>

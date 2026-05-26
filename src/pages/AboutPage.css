@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap');
+
 .about-page {
   min-height: 100vh;
 }
@@ -11,16 +13,30 @@
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 80px;
+  gap: 60px;                /* Adjust gap between History & Founder sections (increase = more space) */
+  margin-bottom: 80px;      /* Adjust gap after content section (increase = more space before Vision & Mission) */
 }
 
 .history-section,
 .founder-section {
   padding: 30px;
-  background-color: #f9f9f9;
-  border-left: 5px solid #c99e4c;
+  background-color: white;
   border-radius: 8px;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0px;       /* Adjust gap below History & Founder (increase = move down) */
+  top: 0px;                 /* Move UP/DOWN: use negative value to move up, positive to move down */
+}
+
+.history-section::before,
+.founder-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 80px;  /* Adjust this value to make the gold bar shorter/longer */
+  background-color: #c99e4c;
 }
 
 .history-section h2,
@@ -29,6 +45,7 @@
   font-weight: bold;
   color: #1a1a1a;
   margin-bottom: 20px;
+  font-family: 'Inria Serif', serif;
 }
 
 .history-section p,
@@ -36,76 +53,100 @@
   font-size: 15px;
   color: #666;
   line-height: 1.8;
+  font-weight: 600;  /* Makes text bolder */
+  font-family: 'Inria Serif', serif;  /* Changed to Inria Serif */
 }
 
 .vision-mission-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 80px;
+  display: block;
+  margin-bottom: 80px;      /* Adjust gap after Vision & Mission section (increase = more space before Core Values) */
   padding: 40px;
-  background: linear-gradient(135deg, #e8dcc8 0%, #f0e8e0 100%);
-  border-radius: 8px;
+  background: white;
+  border-radius: 0;
+  padding-left: 35px;
+  position: relative;
+  top: 0px;                 /* Move UP/DOWN: use negative value to move up, positive to move down */
+}
+
+.vision-mission-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 80px;  /* Adjust this value to make the gold bar shorter/longer */
+  background-color: #c99e4c;
+}
+
+.vision-mission-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-family: 'Inria Serif', serif;
+}
+
+.vision-mission-section p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-weight: 600;  /* Makes text bolder */
+  font-family: 'Inria Serif', serif;  /* Changed to Inria Serif */
 }
 
 .vision,
 .mission {
-  text-align: center;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .vision h3,
 .mission h3 {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
   color: #1a1a1a;
-  margin-bottom: 15px;
-}
-
-.vision p,
-.mission p {
-  font-size: 15px;
-  color: #666;
-  line-height: 1.8;
+  margin-bottom: 5px;
+  font-family: 'Inria Serif', serif;
+  display: inline;
 }
 
 .values-section {
-  text-align: center;
-}
-
-.values-section h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #1a1a1a;
-  margin-bottom: 20px;
   position: relative;
-  padding-bottom: 20px;
+  padding-left: 35px;
+  margin-bottom: 0px;       /* Adjust gap below Core Values section */
+  top: 0px;                 /* Move UP/DOWN: use negative value to move up, positive to move down */
 }
 
-.values-section h2:after {
+.values-section::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 80px;  /* Adjust this value to make the gold bar shorter/longer */
   background-color: #c99e4c;
 }
 
-.values-list {
-  font-size: 18px;
+.values-section h2 {
+  font-size: 32px;
   font-weight: bold;
   color: #1a1a1a;
-  margin: 20px 0;
-  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-family: 'Inria Serif', serif;
+  position: relative;
+  padding-bottom: 0;
 }
 
-.values-description {
+.values-section p {
   font-size: 15px;
   color: #666;
   line-height: 1.8;
-  max-width: 700px;
-  margin: 20px auto;
+  margin-top: -50px;          /* Move UP/DOWN: use negative value to move up (e.g., -10px), positive to move down */
+  position: relative;
+  top: 0px;                 /* Alternative method to move UP/DOWN */
+  font-weight: 600;         /* Makes text bolder */
+  font-family: 'Inria Serif', serif;  /* Changed to Inria Serif */
 }
 
 @media (max-width: 768px) {

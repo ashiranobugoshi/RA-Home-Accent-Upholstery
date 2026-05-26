@@ -41,24 +41,29 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #d4a574;
-  font-weight: bold;
-  font-size: 22px;
   transform: translate(200px, -2px);
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 5px;
 }
 
 .logo-text {
   font-family: 'Inria Serif', serif;
-  font-weight: 700;
-  font-size: 50px;
+  font-weight: 1000;
+  font-size: 30px;
   line-height: 5.2;
   letter-spacing: 1px;
   color: #1a1a1a;
   white-space: nowrap;
   margin: 0;
   position: relative;
-  top: -20px;      /* adjust positive/negative to move up/down */
+  top: -10px;      /* adjust positive/negative to move up/down */
   left: 250px;     /* adjust positive/negative to move left/right */
 }
 
@@ -76,7 +81,7 @@ nav ul {
   padding: 0;
   position: relative;
   top: 25px;      
-  left: -475px;
+  left: -235px;
 }
 
 nav {

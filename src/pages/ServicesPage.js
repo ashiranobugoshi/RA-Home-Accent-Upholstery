@@ -24,13 +24,26 @@ function ServicesPage() {
 
         <div className="who-we-are">
           <div className="who-gallery">
-            <div className="gallery-item">Gallery 1</div>
-            <div className="gallery-item main">Gallery 2</div>
-            <div className="gallery-item">Gallery 3</div>
+            {/* Top Diamond - Accent */}
+            <div className="diamond diamond-accent diamond-top"></div>
+            
+            {/* Left Diamond - Commercial Image */}
+            <div className="diamond diamond-left">
+              <img src={require('../images/header.png')} alt="Commercial Setting" />
+            </div>
+            
+            {/* Right Diamond - Residential Image */}
+            <div className="diamond diamond-right">
+              <img src={require('../images/what we do.png')} alt="Residential Interior" />
+            </div>
+            
+            {/* Bottom Diamond - Accent */}
+            <div className="diamond diamond-accent diamond-bottom"></div>
           </div>
 
           <div className="who-content">
-            <h2>Who We Are?</h2>
+            <h2>Who we are<span className="accent">?</span></h2>
+            <p className="subheader">15+ years of master craftsmanship</p>
             <p>
               RA Home Accent & Upholstery is a trusted name in premium upholstery and furniture 
               restoration. With over 15 years of master craftsmanship and a passion for excellence, 
@@ -46,25 +59,37 @@ function ServicesPage() {
         </div>
 
         <div className="craftsmanship-section">
-          <div className="craftsmanship-content">
-            <h2>Craftsmanship in Action</h2>
-            <div className="carousel">
-              <div className="carousel-item">
-                <div className="icon">👨‍🔧</div>
-                <p><strong>Expert Craftsmanship</strong> — Our team brings decades of combined experience to every project.</p>
+          <div className="cards-container">
+            <div className="project-card">
+              <div className="card-placeholder">
+                <div className="frame-stack"></div>
+                <div className="mountain-icon"></div>
               </div>
-              <div className="carousel-item">
-                <div className="icon">🎨</div>
-                <p><strong>Design Excellence</strong> — Custom designs tailored to your vision and interior style.</p>
-              </div>
-              <div className="carousel-item">
-                <div className="icon">⭐</div>
-                <p><strong>Premium Quality</strong> — Only the finest materials and techniques used for lasting results.</p>
-              </div>
+              <button className="card-button">→</button>
             </div>
-
-            <Link to="/portfolio" className="portfolio-link">View Full Portfolio →</Link>
+            <div className="project-card">
+              <div className="card-placeholder">
+                <div className="frame-stack"></div>
+                <div className="mountain-icon"></div>
+              </div>
+              <button className="card-button">→</button>
+            </div>
+            <div className="project-card">
+              <div className="card-placeholder">
+                <div className="frame-stack"></div>
+                <div className="mountain-icon"></div>
+              </div>
+              <button className="card-button">→</button>
+            </div>
           </div>
+
+          <div className="craftsmanship-header">
+            <h2>Craftsmanship in Action</h2>
+            <div className="accent-divider"></div>
+            <p className="craftsmanship-subtitle">Browse through our completed projects – each piece tells a story of quality, care, and transformation</p>
+          </div>
+
+          <Link to="/portfolio" className="portfolio-link">View Full Portfolio →</Link>
         </div>
       </div>
     </div>
