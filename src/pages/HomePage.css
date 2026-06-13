@@ -137,7 +137,7 @@
 /* Portfolio Section */
 .portfolio-section {
   padding: 80px 40px;
-  background-color: #e8dcc8;
+  background-color: #e8dcc8; /* Background of entire section */
 }
 
 .portfolio-container {
@@ -279,28 +279,50 @@
   background-color: #b89530;
 }
 
+/* ===== PORTFOLIO INFO COLORS ===== */
+/* Change these colors independently */
+
+/* Background color behind the "Why Choose Us" and "Industries Serve" cards */
 .portfolio-info {
+  padding: 40px; /* Change this to adjust spacing around cards */
+  margin: 20px; /* Change this to adjust margin around portfolio-info */
+  border-radius: 8px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr); /* Change to adjust card width */
+  gap: 40px; /* Change this to adjust space between cards */
+  margin-top: 100px; /* Change this to adjust space above section */
 }
 
+/* Card backgrounds for "Why Choose Us" and "Industries Serve" */
 .why-choose-us,
 .industries-serve {
-  background: white;
-  padding: 30px;
-  border-radius: 4px;
+  background: white; /* Card background color */
+  padding: 40px; /* Change this to adjust padding inside cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.why-choose-us:hover,
+.industries-serve:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings in the cards */
 .why-choose-us h3,
 .industries-serve h3 {
-  font-size: 28px;
+  font-size: 32px; /* Change this to adjust heading size */
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #1a1a1a;
-  font-family: 'Playfair Display', Georgia, serif;
+  margin-bottom: 30px; /* Change this to adjust space below heading */
+  color: #1a1a1a; /* Heading text color */
+  font-family: 'Inria Serif', serif;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #c8a439; /* Underline color */
+  display: inline-block;
 }
 
+/* Lists in the cards */
 .why-choose-us ul,
 .industries-serve ul {
   list-style: none;
@@ -308,22 +330,26 @@
   margin: 0;
 }
 
+/* List items */
 .why-choose-us li,
 .industries-serve li {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 15px;
+  font-size: 18px; /* Change this to adjust list text size */
+  color: #1a1a1a; /* List text color */
+  margin-bottom: 18px; /* Change this to adjust space between list items */
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 15px; /* Change this to adjust space between icon and text */
   font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.6;
 }
 
+/* Checkmark and bullet icons */
 .checkmark,
 .bullet {
-  color: #c8a439;
+  color: #c8a439; /* Icon color */
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px; /* Change this to adjust icon size */
+  flex-shrink: 0;
 }
 
 /* Responsive Design */

@@ -29,12 +29,12 @@ function ServicesPage() {
             
             {/* Left Diamond - Commercial Image */}
             <div className="diamond diamond-left">
-              <img src={require('../images/header.png')} alt="Commercial Setting" />
+              <img src={require('../images/table.jpg')} alt="Commercial Setting" />
             </div>
             
             {/* Right Diamond - Residential Image */}
             <div className="diamond diamond-right">
-              <img src={require('../images/what we do.png')} alt="Residential Interior" />
+              <img src={require('../images/chair.jpg')} alt="Residential Interior" />
             </div>
             
             {/* Bottom Diamond - Accent */}

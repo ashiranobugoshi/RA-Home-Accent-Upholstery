@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
-import PortfolioItem from '../components/PortfolioItem';
 import { portfolioItems } from '../data/content';
 import './PortfolioPage.css';
 
 function PortfolioPage() {
   const [filter, setFilter] = useState('all');
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const filteredItems = filter === 'all' 
     ? portfolioItems 
@@ -47,28 +47,96 @@ function PortfolioPage() {
         </div>
 
         <div className="portfolio-wrapper">
-          <div className="portfolio-grid">
-            {filteredItems.map(item => (
-              <PortfolioItem
-                key={item.id}
-                name={item.name}
-                description={item.description}
-                type={item.type}
-              />
-            ))}
+          {/* Left Column: Brand Info */}
+          <div className="portfolio-left-col">
+            <div className="portfolio-brand-heading">
+              <div className="brand-accent-line"></div>
+              <div className="brand-text">
+                <h1>ALL</h1>
+              </div>
+            </div>
+            <h2 className="portfolio-product-name">
+              {selectedItem ? selectedItem.name : 'Mid-Century Sofa'}
+            </h2>
+            <p className="portfolio-product-category">
+              {selectedItem ? selectedItem.category : 'Residential restoration'}
+            </p>
+            <p className="portfolio-description">
+              {selectedItem 
+                ? selectedItem.description || "Established in 2016 (incorporated 2022). Originally Aileen's Dry Goods and Upholstery, we evolved into premium solutions for hotels, restaurant, corporate spaces, and high end-homes. Our master upholsterer brings 15+ years of international experience."
+                : "Established in 2016 (incorporated 2022). Originally Aileen's Dry Goods and Upholstery, we evolved into premium solutions for hotels, restaurant, corporate spaces, and high end-homes. Our master upholsterer brings 15+ years of international experience."
+              }
+            </p>
+            <a href="#before" className="view-before-btn">View Before →</a>
           </div>
 
-          <div className="sidebar">
-            <h3>Mid-Century Sofa</h3>
-            <div className="project-detail">
-              <p><strong>Category:</strong> Residential Restoration</p>
+          {/* Middle Column: Featured Media */}
+          <div className="portfolio-middle-col">
+            <div className="featured-media-card">
+              {selectedItem ? (
+                <div className="featured-media-content">
+                  <div className="featured-media-icon">🖼️</div>
+                  <h3 className="featured-media-title">{selectedItem.name}</h3>
+                  <p className="featured-media-category">{selectedItem.category}</p>
+                </div>
+              ) : (
+                <div className="no-image-placeholder">
+                  <div className="no-image-placeholder-icon">🖼️</div>
+                  <div className="no-image-placeholder-text">No Image</div>
+                  <div className="no-image-placeholder-subtext">You have no photos yet</div>
+                </div>
+              )}
             </div>
-            <div className="project-detail">
-              <p><strong>Project Description:</strong> Classic mid-century sofa restored with premium velvet fabric, featuring new cushioning and authentic restoration of the wooden frame.</p>
-            </div>
-            <div className="sidebar-image">Before Photo</div>
-            <div className="sidebar-image">After Photo</div>
-            <a href="#" className="view-before">← View Before</a>
+          </div>
+
+          {/* Right Column: Item List Feed */}
+          <div className="portfolio-right-col">
+            {filteredItems.length > 0 ? (
+              filteredItems.map(item => (
+                <div 
+                  key={item.id} 
+                  className={`portfolio-item ${selectedItem?.id === item.id ? 'active' : ''}`}
+                  onClick={() => setSelectedItem(item)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      setSelectedItem(item);
+                    }
+                  }}
+                >
+                  <div className="portfolio-item-thumbnail">
+                    <div className="portfolio-item-thumbnail-icon">🖼️</div>
+                  </div>
+                  <div className="portfolio-item-content">
+                    <div className="portfolio-item-accent"></div>
+                    <div className="portfolio-item-text">
+                      <h3 className="portfolio-item-title">{item.name}</h3>
+                      <p className="portfolio-item-category">{item.category}</p>
+                      <p className="portfolio-item-description">
+                        {item.description || "One sentence summary. One sentence summary. One sentence summary. One sentence summary. One sentence summary."}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="portfolio-item">
+                <div className="portfolio-item-thumbnail">
+                  <div className="portfolio-item-thumbnail-icon">🖼️</div>
+                </div>
+                <div className="portfolio-item-content">
+                  <div className="portfolio-item-accent"></div>
+                  <div className="portfolio-item-text">
+                    <h3 className="portfolio-item-title">Mid-Century Sofa</h3>
+                    <p className="portfolio-item-category">Residential restoration</p>
+                    <p className="portfolio-item-description">
+                      One sentence summary. One sentence summary. One sentence summary. One sentence summary. One sentence summary.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

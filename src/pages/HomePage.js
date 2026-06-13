@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCouch, faHammer, faWandMagic, faBuilding, faHouse, faBox } from '@fortawesome/free-solid-svg-icons';
 import './HomePage.css';
 
 const navItems = [
@@ -35,12 +37,12 @@ const industriesServeItems = [
 ];
 
 const serviceCards = [
-  { icon: "💼", title: "Upholstery Services", description: "sofa, chair, headboard, foam replacement & frame repair" },
-  { icon: "🔧", title: "Furniture Restoration", description: "revive worn furniture — sofas, office and hotel chairs" },
-  { icon: "✂️", title: "Custom Restoration", description: "custom sofa, headboards, bed frames & decorative pieces" },
-  { icon: "🏢", title: "Commercial Projects", description: "hotels, restaurants, offices, clinics — bulk upholstery" },
-  { icon: "🏠", title: "Home Textiles", description: "Curtains, cushion covers, table runners, sofa covers." },
-  { icon: "📦", title: "Commercial Supply", description: "Doormats, textile supplies for hotels, corporate bulk orders." },
+  { icon: faCouch, title: "Upholstery Services", description: "sofa, chair, headboard, foam replacement & frame repair" },
+  { icon: faHammer, title: "Furniture Restoration", description: "revive worn furniture — sofas, office and hotel chairs" },
+  { icon: faWandMagic, title: "Custom Restoration", description: "custom sofa, headboards, bed frames & decorative pieces" },
+  { icon: faBuilding, title: "Commercial Projects", description: "hotels, restaurants, offices, clinics — bulk upholstery" },
+  { icon: faHouse, title: "Home Textiles", description: "Curtains, cushion covers, table runners, sofa covers." },
+  { icon: faBox, title: "Commercial Supply", description: "Doormats, textile supplies for hotels, corporate bulk orders." },
 ];
 
 const quickLinks = ["HOME", "ABOUT", "PORTFOLIO", "CONTACT"];
@@ -70,7 +72,7 @@ const ServiceHighlightsSection = () => (
       <div className="services-grid">
         {serviceCards.map((card) => (
           <article key={card.title} className="service-card">
-            <div className="service-icon">{card.icon}</div>
+            <div className="service-icon"><FontAwesomeIcon icon={card.icon} /></div>
             <h3>{card.title}</h3>
             <p>{card.description}</p>
           </article>

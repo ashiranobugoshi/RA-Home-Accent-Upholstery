@@ -23,63 +23,129 @@
   align-items: center;
 }
 
+.industries-section {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+}
+
+.industries-section .section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .industries-section h2 {
-  font-size: 28px;
+  font-size: 48px;
   font-weight: bold;
-  color: #1a1a1a;
+  color: #222222;
   margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+.industries-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #E5C17D;
+  margin-top: 20px;
+  border-radius: 2px;
+}
+
+.industries-section > div > div > div:first-child p {
+  font-size: 16px;
+  color: #222222;
+  line-height: 1.8;
+  margin-bottom: 30px;
   font-family: 'Inria Serif', serif;
 }
 
 .industries-list {
   list-style: none;
+  padding: 0;
 }
 
 .industries-list li {
   font-size: 16px;
-  color: #333;
+  color: #222222;
   padding: 12px 0;
-  border-bottom: 1px solid #e0e0e0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  font-family: 'Inria Serif', serif;
 }
 
 .industries-list li:before {
   content: '✓';
-  color: #c99e4c;
+  color: #E5C17D;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
+  min-width: 24px;
 }
 
-.clients-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.client-image {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, #e8dcc8 0%, #f0e8e0 100%);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #999;
-  font-size: 14px;
+.industries-collage {
   position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.75;
+  min-height: 400px;
 }
 
-.client-image:before {
-  content: '';
+.industries-circle {
   position: absolute;
-  width: 80px;
-  height: 80px;
   border-radius: 50%;
-  background-color: rgba(212, 165, 116, 0.2);
-  left: 20px;
-  top: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.industries-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Circle 1: Large Image - 50% width, top 20%, left 0% */
+.industries-circle-1 {
+  width: 50%;
+  aspect-ratio: 1;
+  top: 27%;
+  left: 50px;
+  z-index: 10;
+}
+
+/* Circle 2: Medium Image - 30% width, top 0%, right 25% */
+.industries-circle-2 {
+  width: 30%;
+  aspect-ratio: 1;
+  top: -10%;
+  right: 25%;
+  z-index: 10;
+}
+
+/* Circle 3: Medium-Large Image - 40% width, bottom 20%, right 0% */
+.industries-circle-3 {
+  width: 40%;
+  aspect-ratio: 1;
+  bottom: 10%;
+  right: -50px;
+  z-index: 20;
+}
+
+/* Circle 4: Small Gold Accent - 15% width, top 10%, right 15% */
+.industries-circle-4 {
+  width: 15%;
+  aspect-ratio: 1;
+  top: 10%;
+  right: 15%;
+  z-index: 30;
+}
+
+/* Circle 5: Large Gold Accent - 35% width, bottom 0%, right 20% */
+.industries-circle-5 {
+  width: 35%;
+  aspect-ratio: 1;
+  bottom: 0;
+  right: 20%;
+  z-index: 40;
 }
 
 .testimonials-section {

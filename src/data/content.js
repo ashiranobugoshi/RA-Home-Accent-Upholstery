@@ -1,38 +1,51 @@
+import { 
+  faCouch, 
+  faHammer, 
+  faWandMagic, 
+  faBuilding, 
+  faHouse, 
+  faBox,
+  faHotel,
+  faPalette,
+  faStar,
+  faGem
+} from '@fortawesome/free-solid-svg-icons';
+
 export const services = [
   {
     id: 1,
     name: "Upholstery Services",
-    icon: "🛋️",
+    icon: faCouch,
     description: "Professional upholstery work including reupholstering sofas, chairs, ottomans, and more with premium fabrics and expert craftsmanship."
   },
   {
     id: 2,
     name: "Furniture Restoration",
-    icon: "🔨",
+    icon: faHammer,
     description: "Expert restoration of vintage and antique furniture, bringing new life to cherished pieces with meticulous attention to detail."
   },
   {
     id: 3,
     name: "Custom Restoration",
-    icon: "✨",
+    icon: faWandMagic,
     description: "Tailored restoration services designed to meet your unique needs, from color matching to custom fabric selection and design."
   },
   {
     id: 4,
     name: "Commercial Projects",
-    icon: "🏢",
+    icon: faBuilding,
     description: "Large-scale commercial upholstery projects for hotels, restaurants, offices, and hospitality venues with consistent quality."
   },
   {
     id: 5,
     name: "Home Textiles",
-    icon: "🏠",
+    icon: faHouse,
     description: "Customized home textile solutions including cushions, throws, and decorative pieces to complement your interior design."
   },
   {
     id: 6,
     name: "Commercial Supply",
-    icon: "📦",
+    icon: faBox,
     description: "Bulk supplies and wholesale upholstery services for interior designers, contractors, and commercial businesses."
   }
 ];
@@ -45,10 +58,10 @@ export const transformations = [
 ];
 
 export const clients = [
-  { id: 1, name: "Grand Hotel Manila", logo: "🏨" },
-  { id: 2, name: "Design Studio Pro", logo: "🎨" },
-  { id: 3, name: "Luxury Resorts Int.", logo: "⭐" },
-  { id: 4, name: "Interior Dreams Co.", logo: "✨" }
+  { id: 1, name: "Grand Hotel Manila", logo: faHotel },
+  { id: 2, name: "Design Studio Pro", logo: faPalette },
+  { id: 3, name: "Luxury Resorts Int.", logo: faStar },
+  { id: 4, name: "Interior Dreams Co.", logo: faGem }
 ];
 
 export const testimonials = [
@@ -194,7 +207,7 @@ export const companyInfo = {
   established: 2016,
   incorporated: 2022,
   founder: "Aileen Malenab",
-  address: "Lot 18 Crystal Homes, abuab Rd., Guilnuang Bayan 2, San Mateo, Rizal 1850, Philippines",
+  address: "Lot 18 Crystal Homes, abuab Rd., Guitnang Bayan 2, San Mateo, Rizal 1850, Philippines",
   phone: "(+63) 905-873-4377",
   email: "aileentamhiomatmenab@yahoo.com",
   hours: "Mon-Fri 8AM - 5PM | Sat-Sun Closed",

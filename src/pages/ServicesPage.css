@@ -25,8 +25,6 @@
   align-items: center;
   margin: 60px 0;
   padding: 60px 0;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
   background-color: #FFFFFF;
 }
 
@@ -49,8 +47,8 @@
 }
 
 .diamond img {
-  width: 280px;
-  height: 280px;
+  width: 200%;
+  height: 200%;
   object-fit: cover;
   transform: rotate(-45deg);
 }
@@ -93,6 +91,7 @@
   transform: translateY(-50%) rotate(45deg);
   border: 8px solid #FFFFFF;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
 }
 
 .who-content {
@@ -344,19 +343,20 @@
 
 .portfolio-link {
   display: inline-block;
+  width: 200px;
   background-color: #E5C17D;
   color: #222222;
   text-decoration: none;
   font-weight: bold;
-  padding: 16px 40px;
+  padding: 10px 25px;
   border-radius: 50px;
   margin-top: 20px;                /* Adjust distance from content above (increase = move down, decrease = move up) */
   margin-bottom: 30px;             /* Adjust distance from footer (increase = move up, decrease = move down) */
-  margin-left: 550px;               /* Center horizontally (set to 0 to move left, auto to center) */
-  margin-right: 550px;              /* Center horizontally (set to 0 to move right, auto to center) */
-  font-size: 16px;
+  margin-left: 570px;               /* Center horizontally (set to 0 to move left, auto to center) */
+  margin-right: 570px;              /* Center horizontally (set to 0 to move right, auto to center) */
+  font-size: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .portfolio-link:hover {

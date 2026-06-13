@@ -63,63 +63,80 @@ function ClientsPage() {
     const isRevealed = revealedCards[cardId];
     
     if (isRevealed) {
-      // After state - show image
-      return (
-        <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-          <img 
-            src="https://via.placeholder.com/382x685?text=Featured+Project" 
-            alt={item.title}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-          
-          {/* Client Logo - Top Left */}
-          <div style={{
-            position: 'absolute',
-            top: '14px',
-            left: '8px',
-            width: '58px',
-            height: '58px',
-            borderRadius: '50%',
-            backgroundColor: 'rgba(255,255,255,0.9)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '10px',
-            fontWeight: 'bold'
-          }}>
-            Logo
-          </div>
+  return (
+    <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+      {/* Scaled Image Container */}
+      <div style={{ 
+        width: '100%', 
+        height: '100%', 
+        overflow: 'hidden'
+      }}>
+        <img 
+          src="https://via.placeholder.com/382x685?text=Featured+Project" 
+          alt={item.title}
+          style={{ 
+            width: '100%', 
+            height: '100%', 
+            objectFit: 'cover',
+            transform: 'scaleX(1.2)',
+            transformOrigin: 'center center',
+            transition: 'transform 0.3s ease'
+          }}
+        />
+      </div>
+      
+      {/* Client Logo - Top Left */}
+      <div style={{
+        position: 'absolute',
+        top: '14px',
+        left: '8px',
+        width: '58px',
+        height: '58px',
+        borderRadius: '50%',
+        backgroundColor: 'rgba(255,255,255,0.9)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '10px',
+        fontWeight: 'bold',
+        zIndex: 10
+      }}>
+        Logo
+      </div>
 
-          {/* Project Details Overlay - Bottom */}
-          <div style={{
-            position: 'absolute',
-            bottom: '0',
-            left: '8px',
-            right: '8px',
-            backgroundColor: 'rgba(0,0,0,0.6)',
-            padding: '16px',
-            color: 'white',
-            fontSize: '14px',
-            fontFamily: "'Playfair Display', Georgia, serif"
-          }}>
-            <p style={{ margin: '0 0 8px 0' }}>
-              <span style={{ fontWeight: 'bold', color: '#c8a439' }}>Project: </span>
-              <span>{item.projectDetails}</span>
-            </p>
-            <p style={{ margin: '0' }}>
-              <span style={{ fontWeight: 'bold', color: '#c8a439' }}>Result: </span>
-              <span>{item.result}</span>
-            </p>
-          </div>
-        </div>
-      );
-    } else {
-      // Before state - show logo + title
+      {/* Project Details Overlay - Bottom */}
+      <div style={{
+        position: 'absolute',
+        bottom: '0',
+        left: '8px',
+        right: '8px',
+        backgroundColor: 'rgba(0,0,0,0.6)',
+        padding: '16px',
+        color: 'white',
+        fontSize: '14px',
+        fontFamily: "'Playfair Display', Georgia, serif",
+        zIndex: 10
+      }}>
+        <p style={{ margin: '0 0 8px 0' }}>
+          <span style={{ fontWeight: 'bold', color: '#c8a439' }}>Project: </span>
+          <span>{item.projectDetails}</span>
+        </p>
+        <p style={{ margin: '0' }}>
+          <span style={{ fontWeight: 'bold', color: '#c8a439' }}>Result: </span>
+          <span>{item.result}</span>
+        </p>
+      </div>
+    </div>
+  );
+} else {
+      // Before state - show image
       return (
         <div style={{
           width: '100%',
           height: '100%',
-          backgroundColor: '#0e243f',
+          backgroundImage: `url(${require('../images/blue.png')})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -154,56 +171,50 @@ function ClientsPage() {
       <PageHeader title="Clients We've Worked With" />
       
       {/* Industries Section */}
-      <section className="industries-section" style={{ padding: '80px 20px', backgroundColor: '#f9f9f9' }}>
+      <section className="industries-section">
         <div className="section-container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
             {/* Left Side - Industries List */}
             <div>
-              <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '30px', color: '#1a1a1a' }}>
-                Industries we serve
-              </h2>
+              <h2>Industries We Serve</h2>
               
-              <p style={{ fontSize: '16px', color: '#666', lineHeight: '1.8', marginBottom: '30px' }}>
+              <p>
                 We proudly partner with businesses and homeowners across multiple industries, delivering quality 
                 upholstery and furniture restoration tailored to each space.
               </p>
 
-              <ul style={{ listStyle: 'none', padding: 0 }}>
+              <ul className="industries-list">
                 {industries.map((industry, index) => (
-                  <li key={index} style={{ 
-                    padding: '12px 0', 
-                    paddingLeft: '35px', 
-                    position: 'relative', 
-                    fontSize: '16px', 
-                    color: '#333' 
-                  }}>
-                    <span style={{ 
-                      position: 'absolute', 
-                      left: 0, 
-                      color: '#c99e4c', 
-                      fontWeight: 'bold', 
-                      fontSize: '18px' 
-                    }}>✓</span>
-                    {industry}
-                  </li>
+                  <li key={index}>{industry}</li>
                 ))}
               </ul>
             </div>
 
-            {/* Right Side - Circular Images */}
-            <div style={{ position: 'relative', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{
-                width: '300px',
-                height: '300px',
-                borderRadius: '50%',
-                backgroundColor: '#e8dcc8',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '14px',
-                color: '#999'
-              }}>
-                Image Placeholder
+            {/* Right Side - Circular Collage */}
+            <div className="industries-collage">
+              {/* Circle 1: Large Image (50%, top 20%, left 0%) */}
+              <div className="industries-circle industries-circle-1">
+                <img src={require('../images/premium sofa.jpg')} alt="Premium Sofa Upholstery" />
+              </div>
+
+              {/* Circle 2: Medium Image (30%, top 0%, right 25%) */}
+              <div className="industries-circle industries-circle-2">
+                <img src={require('../images/dining chairs.jpg')} alt="Dining Chairs" />
+              </div>
+
+              {/* Circle 3: Medium-Large Image (40%, bottom 20%, right 0%) */}
+              <div className="industries-circle industries-circle-3">
+                <img src={require('../images/sectional.jpg')} alt="Sectional Sofa" />
+              </div>
+
+              {/* Circle 4: Small Gold Accent (15%, top 10%, right 15%) */}
+              <div className="industries-circle industries-circle-4">
+                <img src={require('../images/circle.png')} alt="Accent" />
+              </div>
+
+              {/* Circle 5: Large Gold Accent (35%, bottom 0%, right 20%) */}
+              <div className="industries-circle industries-circle-5">
+                <img src={require('../images/circle.png')} alt="Accent" />
               </div>
             </div>
           </div>
@@ -211,8 +222,8 @@ function ClientsPage() {
       </section>
 
       {/* Portfolio Section */}
-      <section className="portfolio-section" style={{ padding: '80px 20px', backgroundColor: '#2c3e50', position: 'relative' }}>
-        <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', height: '685px' }}>
+      <section className="portfol0io-section" style={{ padding: '0px 0px', backgroundColor: '#2c3e50', position: 'relative' }}>
+        <div style={{ width: '100%', margin: '0 auto', position: 'relative', height: '685px' }}>
           
           {/* Left Card */}
           <div 
@@ -221,10 +232,17 @@ function ClientsPage() {
               position: 'absolute', 
               left: 0, 
               top: 0, 
-              width: '265px', 
+              width: '20%', 
               height: '685px',
               cursor: 'pointer',
-              overflow: 'hidden'
+              overflow: 'hidden',
+              backgroundImage: `url(${require('../images/table.jpg')})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              transform: revealedCards['left'] ? 'scaleX(1.5)' : 'scaleX(1)',
+              transformOrigin: 'center center',
+              transition: 'transform 0.3s ease, z-index 0s',
+              zIndex: revealedCards['left'] ? 1 : 1
             }}>
             {renderCardContent(currentProject, 'left')}
           </div>
@@ -234,9 +252,9 @@ function ClientsPage() {
             onClick={() => toggleCardReveal('center')}
             style={{ 
               position: 'absolute', 
-              left: '265px', 
+              left: '20%', 
               top: 0, 
-              width: '382px', 
+              width: '20%', 
               height: '685px',
               cursor: 'pointer',
               overflow: 'hidden'
@@ -251,9 +269,9 @@ function ClientsPage() {
               onClick={() => toggleCardReveal(`right-${index}`)}
               style={{
                 position: 'absolute',
-                left: `${647 + index * 265}px`,
+                left: `${40 + index * 20}%`,
                 top: 0,
-                width: '265px',
+                width: '20%',
                 height: '685px',
                 cursor: 'pointer',
                 overflow: 'hidden'

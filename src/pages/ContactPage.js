@@ -21,9 +21,20 @@ function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the form data to a server
-    alert('Thank you for your message! We will get back to you soon.');
+
+    const { name, email, phone, message } = formData;
+
+    // Construct mailto link with your Yahoo email
+    const mailtoLink = `mailto:aileentamhiomatmenab@yahoo.com?subject=Message from ${encodeURIComponent(name)}&body=
+    Name: ${encodeURIComponent(name)}%0D%0A
+    Email: ${encodeURIComponent(email)}%0D%0A
+    Phone: ${encodeURIComponent(phone)}%0D%0A
+    Message: ${encodeURIComponent(message)}`;
+
+    // Open default email client
+    window.location.href = mailtoLink;
+
+    // Reset form after triggering mailto
     setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
@@ -101,10 +112,10 @@ function ContactPage() {
             </div>
 
             <div className="social-icons">
-              <a href="https://facebook.com" className="social-icon" title="Facebook">f</a>
-              <a href="https://m.me" className="social-icon" title="Messenger">m</a>
-              <a href="viber://chat" className="social-icon" title="Viber">☎</a>
-              <a href="https://wa.me" className="social-icon" title="WhatsApp">W</a>
+              <a href="https://www.facebook.com/RAhomeaccents" className="social-icon" title="Facebook">f</a>
+              <a href="https://www.messenger.com/t/1034323823257611" className="social-icon" title="Messenger">m</a>
+              <a href="viber://chat?number=+639178734377" className="social-icon" title="Viber">☎</a>
+              <a href="https://wa.me/639178734377" className="social-icon" title="WhatsApp">✆</a>
             </div>
           </div>
         </div>

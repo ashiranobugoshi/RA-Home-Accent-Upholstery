@@ -29,8 +29,32 @@ function QuotePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Quote form submitted:', formData);
-    alert('Your quote request has been submitted! We will contact you within 24 hours.');
+
+    const {
+      fullname, email, phone, service, projecttype,
+      description, dimensions, furniture, fabric,
+      budget, date, delivery
+    } = formData;
+
+    // Construct mailto link with your Yahoo email
+    const mailtoLink = `mailto:aileentamhiomatmenab@yahoo.com?subject=Quote Request from ${encodeURIComponent(fullname)}&body=
+    Full Name: ${encodeURIComponent(fullname)}%0D%0A
+    Email: ${encodeURIComponent(email)}%0D%0A
+    Phone: ${encodeURIComponent(phone)}%0D%0A
+    Service Needed: ${encodeURIComponent(service)}%0D%0A
+    Project Type: ${encodeURIComponent(projecttype)}%0D%0A
+    Description: ${encodeURIComponent(description)}%0D%0A
+    Dimensions: ${encodeURIComponent(dimensions)}%0D%0A
+    Furniture: ${encodeURIComponent(furniture)}%0D%0A
+    Fabric: ${encodeURIComponent(fabric)}%0D%0A
+    Budget: ${encodeURIComponent(budget)}%0D%0A
+    Desired Start Date: ${encodeURIComponent(date)}%0D%0A
+    Delivery/Pickup: ${encodeURIComponent(delivery)}`;
+
+    // Open default email client
+    window.location.href = mailtoLink;
+
+    // Reset form
     setFormData({
       fullname: '',
       email: '',

@@ -17,6 +17,13 @@
 .service-icon {
   font-size: 48px;
   margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  
+ 
 }
 
 .service-card h3 {

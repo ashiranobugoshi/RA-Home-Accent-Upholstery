@@ -1,10 +1,13 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './ServiceCard.css';
 
 function ServiceCard({ icon, name, description }) {
   return (
     <div className="service-card">
-      <div className="icon">{icon}</div>
+      <div className="icon">
+        <FontAwesomeIcon icon={icon} />
+      </div>
       <h3>{name}</h3>
       <p>{description}</p>
     </div>
