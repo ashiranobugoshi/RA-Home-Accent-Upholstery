@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.72f2ee4f.css",
+    "main.js": "/static/js/main.99bd163d.js",
+    "static/js/453.1dff8e23.chunk.js": "/static/js/453.1dff8e23.chunk.js",
+    "static/media/what we do.png": "/static/media/what we do.446a1157dc786f93f8ae.png",
+    "static/media/circle.png": "/static/media/circle.4bda9c3f0b6b94436773.png",
+    "static/media/header.png": "/static/media/header.9dd955d5d99bdbd85bdd.png",
+    "static/media/blue.png": "/static/media/blue.063330d4abe88430228c.png",
+    "static/media/logo.png": "/static/media/logo.ef35fff096dc5babc09c.png",
+    "static/media/dining chairs.jpg": "/static/media/dining chairs.a11065c1ce5fd3197aa0.jpg",
+    "static/media/premium sofa.jpg": "/static/media/premium sofa.a0dc70ff5a935ab8bbc7.jpg",
+    "static/media/table.jpg": "/static/media/table.bd01a609128a83187e00.jpg",
+    "static/media/chair.jpg": "/static/media/chair.10627e9eef6354ffca45.jpg",
+    "static/media/sectional.jpg": "/static/media/sectional.cec88011cd9f8cc99dbc.jpg",
+    "index.html": "/index.html",
+    "main.72f2ee4f.css.map": "/static/css/main.72f2ee4f.css.map",
+    "main.99bd163d.js.map": "/static/js/main.99bd163d.js.map",
+    "453.1dff8e23.chunk.js.map": "/static/js/453.1dff8e23.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72f2ee4f.css",
+    "static/js/main.99bd163d.js"
+  ]
+}
