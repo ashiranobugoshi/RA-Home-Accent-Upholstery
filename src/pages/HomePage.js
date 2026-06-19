@@ -49,8 +49,8 @@ const quickLinks = ["HOME", "ABOUT", "PORTFOLIO", "CONTACT"];
 const services = ["UPHOLSTERY", "RESTORATION", "CUSTOM"];
 const contactItems = [
   { icon: "📞", text: "0917 873 4377", href: "tel:09178734377" },
-  { icon: "✉️", text: "aileentambiomalenab@yahoo.com", href: "mailto:aileentambiomalenab@yahoo.com" },
-  { icon: "📍", text: "San Mateo, Rizal", href: "https://maps.google.com/?q=San+Mateo,+Rizal" },
+  { icon: "✉️", text: "rahomeaccentandupholstery@yahoo.com", href: "mailto:rahomeaccentandupholstery@yahoo.com" },
+  { icon: "📍", text: "Crystal homes abuab 2, Rizal, Philippines, 1850", href: "https://maps.google.com/?q=Crystal+homes+abuab+2,+Rizal,+Philippines,+1850" },
 ];
 
 const BrandNavigationSection = () => null;

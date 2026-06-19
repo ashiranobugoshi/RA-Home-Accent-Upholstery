@@ -1,20 +1,17 @@
 footer {
   background-color: #0E243F;
   color: white;
-  padding: -10px 30px;  /* First value = top/bottom padding, Second = left/right padding */
-  margin-top: 0px;      /* Space above entire footer */
+  padding: 30px 30px 20px;
+  margin-top: 0;
 }
 
 /* LOGO CONTAINER - Adjust position, alignment, and size here */
 .footer-logo-container {
   max-width: 1200px;
-  margin-bottom: 10px;
+  margin: 0 auto 16px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  position: relative;
-  left: 70px;           /* Move LEFT/RIGHT: increase = move right, decrease (or negative) = move left */
-  top: 70px;           /* Move UP/DOWN: increase = move down, decrease (or negative) = move up */
 }
 
 .footer-content {
@@ -34,12 +31,12 @@ footer {
 .footer-logo-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  /* Change to 'center' or 'flex-end' to adjust horizontal alignment */
+  align-items: flex-start;
   gap: 15px;                /* Space between logo, title, and description (increase = more vertical gap) */
 }
 
 .footer-logo-section p {
-  margin-top: -15px;  /* Move UP/DOWN: use negative value to move up, positive to move down */
+  margin-top: -8px;
 }
 
 .footer-logo {
@@ -107,6 +104,10 @@ footer {
 @media (max-width: 768px) {
   .footer-content {
     gap: 30px;
+  }
+
+  .footer-logo-container {
+    justify-content: flex-start;
   }
 
   .footer-section h3 {

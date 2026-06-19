@@ -25,7 +25,7 @@ function ContactPage() {
     const { name, email, phone, message } = formData;
 
     // Construct mailto link with your Yahoo email
-    const mailtoLink = `mailto:aileentamhiomatmenab@yahoo.com?subject=Message from ${encodeURIComponent(name)}&body=
+    const mailtoLink = `mailto:rahomeaccentandupholstery@yahoo.com?subject=Message from ${encodeURIComponent(name)}&body=
     Name: ${encodeURIComponent(name)}%0D%0A
     Email: ${encodeURIComponent(email)}%0D%0A
     Phone: ${encodeURIComponent(phone)}%0D%0A

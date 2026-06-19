@@ -352,7 +352,7 @@
   border-radius: 50px;
   margin-top: 20px;                /* Adjust distance from content above (increase = move down, decrease = move up) */
   margin-bottom: 30px;             /* Adjust distance from footer (increase = move up, decrease = move down) */
-  margin-left: 570px;               /* Center horizontally (set to 0 to move left, auto to center) */
+  margin-left: 750px;               /* Center horizontally (set to 0 to move left, auto to center) */
   margin-right: 570px;              /* Center horizontally (set to 0 to move right, auto to center) */
   font-size: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;

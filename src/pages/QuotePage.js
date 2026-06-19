@@ -37,7 +37,7 @@ function QuotePage() {
     } = formData;
 
     // Construct mailto link with your Yahoo email
-    const mailtoLink = `mailto:aileentamhiomatmenab@yahoo.com?subject=Quote Request from ${encodeURIComponent(fullname)}&body=
+    const mailtoLink = `mailto:rahomeaccentandupholstery@yahoo.com?subject=Quote Request from ${encodeURIComponent(fullname)}&body=
     Full Name: ${encodeURIComponent(fullname)}%0D%0A
     Email: ${encodeURIComponent(email)}%0D%0A
     Phone: ${encodeURIComponent(phone)}%0D%0A
@@ -246,15 +246,8 @@ function QuotePage() {
           </div>
 
           <div className="form-group full">
-            <label htmlFor="photos">Photo Upload (optional 1-3 images)</label>
-            <input
-              type="file"
-              id="photos"
-              name="photos"
-              accept="image/*"
-              multiple
-              onChange={handleChange}
-            />
+            <label htmlFor="photos">Once the email draft is generated, attach up to 3 images</label>
+            
           </div>
 
           <button type="submit" className="submit-btn">Submit Quote Request</button>

@@ -40,15 +40,15 @@ function Footer() {
           <h3>CONTACT</h3>
           <div className="contact-info">
             <span>📞</span>
-            <p>(+63) 905-8123</p>
+            <p>0917 873 4377</p>
           </div>
           <div className="contact-info">
             <span>✉️</span>
-            <p>ahccentah@yahoo.com</p>
+            <p>rahomeaccentandupholstery@yahoo.com</p>
           </div>
           <div className="contact-info">
             <span>📍</span>
-            <p>San Mateo, Rizal</p>
+            <p>Crystal homes abuab 2, Rizal, Philippines, 1850</p>
           </div>
         </div>
       </div>
